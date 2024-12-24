@@ -15,6 +15,10 @@ Webber is a fast web framework for Golang.
 package main
 
 import (
+	"encoding/json"
+	"errors"
+
+	"github.com/redis/go-redis/v9"
 	"github.com/xbmlz/webber"
 )
 
@@ -30,29 +34,47 @@ func main() {
 	// get config
 	env := app.Config.GetString("APP_ENV", "dev")
 
-    app.
+	// migrate table
+	app.MigrateDB(&User{})
+
+	// seed data
+	app.SeedDB(&User{ID: 1, Name: "John"})
 
 	app.Get("/ping", func(c *webber.Context) {
-
 		// log
 		c.Logger.Infof("App env: %s", env)
 
-		// create user
-		c.DB.Create(&User{Name: "John"})
-		// get user
 		user := User{}
-		c.DB.First(&user, 1)
+		// get user from redis
+		val, err := c.Redis.Get(c.Context, "user").Result()
+		if err != nil && errors.Is(err, redis.Nil) {
+			// get user from db
+			c.DB.First(&user, 1)
+			c.Logger.Infof("Got user from db: %v", user)
+			// cache to redis
+			userJson, _ := json.Marshal(user)
+			c.Redis.Set(c.Context, "user", string(userJson), 0)
+		} else {
+			// unmarshal json
+			json.Unmarshal([]byte(val), &user)
+			c.JSON(200, map[string]interface{}{
+				"user": user,
+				"from": "cache",
+			})
+			return
+		}
 
 		// response json
 		c.JSON(200, map[string]interface{}{
-			"app_env": env,
-			"user":    user,
+			"user": user,
+			"from": "db",
 		})
 	})
 
 	// run app on port 8080
 	app.Run()
 }
+
 
 ```
 
