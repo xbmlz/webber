@@ -23,11 +23,11 @@ type httpServer struct {
 }
 
 func newHTTPServer(c *container.Container, host string, port int, env string) *httpServer {
-	r := gin.New()
-
 	if env == "prod" {
 		gin.SetMode(gin.ReleaseMode)
 	}
+
+	r := gin.New()
 
 	// TODO: Add default middleware
 	r.Use(
@@ -58,20 +58,21 @@ func (s *httpServer) Run(c *container.Container) {
 	if s.certFile != "" && s.keyFile != "" {
 		// check file is exists
 		if _, err := os.Stat(s.certFile); os.IsNotExist(err) {
-			c.Logger.Fatalf("Error loading %s: %v", s.certFile, err)
+			c.Logger.Errorf("Error loading %s: %v", s.certFile, err)
 		}
 		if _, err := os.Stat(s.keyFile); os.IsNotExist(err) {
-			c.Logger.Fatalf("Error loading %s: %v", s.keyFile, err)
+			c.Logger.Errorf("Error loading %s: %v", s.keyFile, err)
 		}
 
 		if err := s.srv.ListenAndServeTLS(s.certFile, s.keyFile); err != nil {
-			c.Logger.Fatalf("Error starting server: %v", err)
+			c.Logger.Errorf("Error starting server: %v", err)
 		}
 		return
 	}
 
-	if err := s.srv.ListenAndServe(); err != nil {
-		c.Logger.Fatalf("Error starting server: %v", err)
+	// If no certFile/keyFile is provided, run the HTTP server
+	if err := s.srv.ListenAndServe(); err != http.ErrServerClosed {
+		c.Logger.Errorf("Error starting server: %v", err)
 	}
 }
 

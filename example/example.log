@@ -1,0 +1,105 @@
+2024-12-24T14:20:22+08:00	debug	db/db.go:37	initializing database connection
+2024-12-24T14:20:22+08:00	debug	db/db.go:43	skipping database connection initialization as 'DB_HOST' is not provided
+2024-12-24T14:20:22+08:00	info	webber/http_server.go:50	Starting server on localhost:8080
+2024-12-24T14:20:55+08:00	fatal	webber/http_server.go:74	Error starting server: http: Server closed
+github.com/xbmlz/webber.(*httpServer).Run
+	/home/cxc/code/go/src/github.com/xbmlz/webber/http_server.go:74
+github.com/xbmlz/webber.(*App).Run.func2
+	/home/cxc/code/go/src/github.com/xbmlz/webber/webber.go:77
+2024-12-24T14:21:04+08:00	debug	db/db.go:37	initializing database connection
+2024-12-24T14:21:04+08:00	debug	db/db.go:47	connecting to database
+2024-12-24T14:21:04+08:00	debug	db/db.go:55	dialector: &{ file:example.db <nil>}
+2024-12-24T14:21:04+08:00	debug	db/db.go:82	connected to database
+2024-12-24T14:21:04+08:00	info	webber/http_server.go:50	Starting server on localhost:8080
+2024-12-24T14:21:29+08:00	fatal	webber/http_server.go:74	Error starting server: http: Server closed
+github.com/xbmlz/webber.(*httpServer).Run
+	/home/cxc/code/go/src/github.com/xbmlz/webber/http_server.go:74
+github.com/xbmlz/webber.(*App).Run.func2
+	/home/cxc/code/go/src/github.com/xbmlz/webber/webber.go:77
+2024-12-24T14:22:25+08:00	debug	db/db.go:37	initializing database connection
+2024-12-24T14:22:25+08:00	debug	db/db.go:47	connecting to database
+2024-12-24T14:22:25+08:00	debug	db/db.go:55	dialector: &{ file:example.db <nil>}
+2024-12-24T14:22:25+08:00	debug	db/db.go:82	connected to database
+2024-12-24T14:22:25+08:00	info	webber/http_server.go:50	Starting server on localhost:8080
+2024-12-24T14:22:58+08:00	fatal	webber/http_server.go:74	Error starting server: http: Server closed
+github.com/xbmlz/webber.(*httpServer).Run
+	/home/cxc/code/go/src/github.com/xbmlz/webber/http_server.go:74
+github.com/xbmlz/webber.(*App).Run.func2
+	/home/cxc/code/go/src/github.com/xbmlz/webber/webber.go:77
+2024-12-24T14:23:58+08:00	debug	db/db.go:37	initializing database connection
+2024-12-24T14:23:58+08:00	debug	db/db.go:47	connecting to database
+2024-12-24T14:23:58+08:00	debug	db/db.go:55	dialector: &{ file:example.db <nil>}
+2024-12-24T14:23:58+08:00	debug	db/db.go:82	connected to database
+2024-12-24T14:23:58+08:00	info	webber/http_server.go:50	Starting server on localhost:8080
+2024-12-24T14:24:02+08:00	info	example/main.go:14	App env: prod
+2024-12-24T14:24:02+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.000125203, "time": "2024-12-24 06:24:02"}
+2024-12-24T14:24:27+08:00	fatal	webber/http_server.go:74	Error starting server: http: Server closed
+github.com/xbmlz/webber.(*httpServer).Run
+	/home/cxc/code/go/src/github.com/xbmlz/webber/http_server.go:74
+github.com/xbmlz/webber.(*App).Run.func2
+	/home/cxc/code/go/src/github.com/xbmlz/webber/webber.go:77
+2024-12-24T14:24:29+08:00	debug	db/db.go:37	initializing database connection
+2024-12-24T14:24:29+08:00	debug	db/db.go:47	connecting to database
+2024-12-24T14:24:29+08:00	debug	db/db.go:55	dialector: &{ file:example.db <nil>}
+2024-12-24T14:24:29+08:00	debug	db/db.go:82	connected to database
+2024-12-24T14:24:29+08:00	info	webber/http_server.go:50	Starting server on localhost:8080
+2024-12-24T14:24:35+08:00	fatal	webber/http_server.go:74	Error starting server: http: Server closed
+github.com/xbmlz/webber.(*httpServer).Run
+	/home/cxc/code/go/src/github.com/xbmlz/webber/http_server.go:74
+github.com/xbmlz/webber.(*App).Run.func2
+	/home/cxc/code/go/src/github.com/xbmlz/webber/webber.go:77
+2024-12-24T14:25:10+08:00	debug	db/db.go:37	initializing database connection
+2024-12-24T14:25:10+08:00	debug	db/db.go:47	connecting to database
+2024-12-24T14:25:10+08:00	debug	db/db.go:55	dialector: &{ file:example.db <nil>}
+2024-12-24T14:25:10+08:00	debug	db/db.go:82	connected to database
+2024-12-24T14:25:10+08:00	info	webber/http_server.go:50	Starting server on localhost:9001
+2024-12-24T14:25:11+08:00	fatal	webber/http_server.go:74	Error starting server: http: Server closed
+github.com/xbmlz/webber.(*httpServer).Run
+	/home/cxc/code/go/src/github.com/xbmlz/webber/http_server.go:74
+github.com/xbmlz/webber.(*App).Run.func2
+	/home/cxc/code/go/src/github.com/xbmlz/webber/webber.go:77
+2024-12-24T14:27:25+08:00	debug	db/db.go:37	initializing database connection
+2024-12-24T14:27:25+08:00	debug	db/db.go:47	connecting to database
+2024-12-24T14:27:25+08:00	debug	db/db.go:55	dialector: &{ file:example.db <nil>}
+2024-12-24T14:27:25+08:00	debug	db/db.go:82	connected to database
+2024-12-24T14:27:25+08:00	info	webber/http_server.go:50	Starting server on localhost:9001
+2024-12-24T14:27:27+08:00	fatal	webber/http_server.go:74	Error starting server: http: Server closed
+github.com/xbmlz/webber.(*httpServer).Run
+	/home/cxc/code/go/src/github.com/xbmlz/webber/http_server.go:74
+github.com/xbmlz/webber.(*App).Run.func2
+	/home/cxc/code/go/src/github.com/xbmlz/webber/webber.go:77
+2024-12-24T14:28:13+08:00	debug	db/db.go:37	initializing database connection
+2024-12-24T14:28:13+08:00	debug	db/db.go:47	connecting to database
+2024-12-24T14:28:13+08:00	debug	db/db.go:55	dialector: &{ file:example.db <nil>}
+2024-12-24T14:28:13+08:00	debug	db/db.go:82	connected to database
+2024-12-24T14:28:13+08:00	info	webber/http_server.go:27	env prod
+2024-12-24T14:28:13+08:00	info	webber/http_server.go:50	Starting server on localhost:9001
+2024-12-24T14:28:15+08:00	fatal	webber/http_server.go:74	Error starting server: http: Server closed
+github.com/xbmlz/webber.(*httpServer).Run
+	/home/cxc/code/go/src/github.com/xbmlz/webber/http_server.go:74
+github.com/xbmlz/webber.(*App).Run.func2
+	/home/cxc/code/go/src/github.com/xbmlz/webber/webber.go:77
+2024-12-24T14:28:47+08:00	debug	db/db.go:37	initializing database connection
+2024-12-24T14:28:47+08:00	debug	db/db.go:47	connecting to database
+2024-12-24T14:28:47+08:00	debug	db/db.go:55	dialector: &{ file:example.db <nil>}
+2024-12-24T14:28:47+08:00	debug	db/db.go:82	connected to database
+2024-12-24T14:28:47+08:00	info	webber/http_server.go:31	env prod
+2024-12-24T14:28:47+08:00	info	webber/http_server.go:51	Starting server on localhost:9001
+2024-12-24T14:29:27+08:00	fatal	webber/http_server.go:75	Error starting server: http: Server closed
+github.com/xbmlz/webber.(*httpServer).Run
+	/home/cxc/code/go/src/github.com/xbmlz/webber/http_server.go:75
+github.com/xbmlz/webber.(*App).Run.func2
+	/home/cxc/code/go/src/github.com/xbmlz/webber/webber.go:77
+2024-12-24T14:35:57+08:00	debug	db/db.go:37	initializing database connection
+2024-12-24T14:35:57+08:00	debug	db/db.go:47	connecting to database
+2024-12-24T14:35:57+08:00	debug	db/db.go:80	connected to database
+2024-12-24T14:35:57+08:00	info	webber/http_server.go:50	Starting server on localhost:9001
+2024-12-24T14:35:58+08:00	error	webber/http_server.go:75	Error starting server: http: Server closed
+github.com/xbmlz/webber.(*httpServer).Run
+	/home/cxc/code/go/src/github.com/xbmlz/webber/http_server.go:75
+github.com/xbmlz/webber.(*App).Run.func2
+	/home/cxc/code/go/src/github.com/xbmlz/webber/webber.go:77
+2024-12-24T14:36:23+08:00	debug	db/db.go:37	initializing database connection
+2024-12-24T14:36:23+08:00	debug	db/db.go:47	connecting to database
+2024-12-24T14:36:23+08:00	debug	db/db.go:80	connected to database
+2024-12-24T14:36:23+08:00	info	webber/http_server.go:50	Starting server on localhost:9001
