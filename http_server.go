@@ -7,6 +7,7 @@ import (
 	"os"
 	"time"
 
+	"github.com/gin-contrib/pprof"
 	ginzap "github.com/gin-contrib/zap"
 	"github.com/gin-gonic/gin"
 	"github.com/xbmlz/webber/container"
@@ -28,6 +29,8 @@ func newHTTPServer(c *container.Container, host string, port int, env string) *h
 	}
 
 	r := gin.New()
+
+	pprof.Register(r)
 
 	// TODO: Add default middleware
 	r.Use(

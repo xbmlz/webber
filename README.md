@@ -24,17 +24,19 @@ type User struct {
 }
 
 func main() {
+	// create app
 	app := webber.New()
 
+	// get config
+	env := app.Config.GetString("APP_ENV", "dev")
+
+    app.
+
 	app.Get("/ping", func(c *webber.Context) {
-		// get config
-		env := app.Config.GetString("APP_ENV", "dev")
+
 		// log
 		c.Logger.Infof("App env: %s", env)
 
-		// db
-		// migrate table
-		c.DB.AutoMigrate(&User{})
 		// create user
 		c.DB.Create(&User{Name: "John"})
 		// get user
@@ -48,6 +50,7 @@ func main() {
 		})
 	})
 
+	// run app on port 8080
 	app.Run()
 }
 

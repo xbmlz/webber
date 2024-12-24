@@ -34,7 +34,6 @@ type Config struct {
 var errUnsupportedDialect = fmt.Errorf("unsupported db dialect; supported dialects are - mysql, postgres, sqlite")
 
 func New(config config.Config, logger datasource.Logger) *DB {
-	logger.Debugf("initializing database connection")
 
 	dbConfig := getConfig(config)
 
@@ -43,8 +42,6 @@ func New(config config.Config, logger datasource.Logger) *DB {
 		logger.Debugf("skipping database connection initialization as 'DB_HOST' is not provided")
 		return nil
 	}
-
-	logger.Debugf("connecting to database")
 
 	dialector, err := getDialector(dbConfig)
 	if err != nil {

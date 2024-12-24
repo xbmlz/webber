@@ -119,3 +119,371 @@ github.com/xbmlz/webber.(*App).Run.func2
 2024-12-24T14:40:43+08:00	info	webber/http_server.go:50	Starting server on localhost:8080
 2024-12-24T14:40:46+08:00	info	example/main.go:19	App env: prod
 2024-12-24T14:40:46+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.022832645, "time": "2024-12-24 06:40:46"}
+2024-12-24T16:13:06+08:00	debug	db/db.go:37	initializing database connection
+2024-12-24T16:13:06+08:00	debug	db/db.go:47	connecting to database
+2024-12-24T16:13:06+08:00	debug	db/db.go:80	connected to database
+2024-12-24T16:13:06+08:00	info	webber/http_server.go:54	Starting server on localhost:8080
+2024-12-24T16:13:24+08:00	debug	db/db.go:37	initializing database connection
+2024-12-24T16:13:24+08:00	debug	db/db.go:47	connecting to database
+2024-12-24T16:13:24+08:00	debug	db/db.go:80	connected to database
+2024-12-24T16:13:24+08:00	info	webber/http_server.go:53	Starting server on localhost:8080
+2024-12-24T16:13:38+08:00	info	gin@v1.10.0/context.go:185	/debug/pprof	{"status": 404, "method": "GET", "path": "/debug/pprof", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.000031833, "time": "2024-12-24 08:13:38"}
+2024-12-24T16:14:15+08:00	info	gin@v1.10.0/context.go:185	/pprof	{"status": 404, "method": "GET", "path": "/pprof", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.00001594, "time": "2024-12-24 08:14:15"}
+2024-12-24T16:14:20+08:00	info	gin@v1.10.0/context.go:185	/debug/pprof	{"status": 404, "method": "GET", "path": "/debug/pprof", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.00001144, "time": "2024-12-24 08:14:20"}
+2024-12-24T16:14:42+08:00	debug	db/db.go:37	initializing database connection
+2024-12-24T16:14:42+08:00	debug	db/db.go:47	connecting to database
+2024-12-24T16:14:42+08:00	debug	db/db.go:80	connected to database
+2024-12-24T16:14:42+08:00	info	webber/http_server.go:55	Starting server on localhost:8080
+2024-12-24T16:16:37+08:00	debug	db/db.go:37	initializing database connection
+2024-12-24T16:16:37+08:00	debug	db/db.go:47	connecting to database
+2024-12-24T16:16:37+08:00	debug	db/db.go:80	connected to database
+2024-12-24T16:16:37+08:00	info	webber/http_server.go:53	Starting server on localhost:8080
+2024-12-24T16:57:37+08:00	debug	redis/hook.go:65	ping
+2024-12-24T16:57:37+08:00	error	redis/redis.go:53	failed to connect to redis at localhost:6379: dial tcp 127.0.0.1:6379: connect: connection refused
+github.com/xbmlz/webber/datasource/redis.New
+	/home/cxc/code/go/src/github.com/xbmlz/webber/datasource/redis/redis.go:53
+github.com/xbmlz/webber/container.(*Container).init
+	/home/cxc/code/go/src/github.com/xbmlz/webber/container/container.go:33
+github.com/xbmlz/webber/container.New
+	/home/cxc/code/go/src/github.com/xbmlz/webber/container/container.go:24
+github.com/xbmlz/webber.New
+	/home/cxc/code/go/src/github.com/xbmlz/webber/webber.go:32
+main.main
+	/home/cxc/code/go/src/github.com/xbmlz/webber/example/main.go:17
+runtime.main
+	/usr/local/go/src/runtime/proc.go:271
+2024-12-24T16:57:37+08:00	debug	db/db.go:37	initializing database connection
+2024-12-24T16:57:37+08:00	debug	db/db.go:47	connecting to database
+2024-12-24T16:57:37+08:00	debug	db/db.go:80	connected to database
+2024-12-24T16:57:37+08:00	info	webber/http_server.go:53	Starting server on localhost:8080
+2024-12-24T16:59:29+08:00	debug	redis/hook.go:65	ping
+2024-12-24T16:59:29+08:00	error	redis/redis.go:53	failed to connect to redis at localhost:6379: dial tcp 127.0.0.1:6379: connect: connection refused
+github.com/xbmlz/webber/datasource/redis.New
+	/home/cxc/code/go/src/github.com/xbmlz/webber/datasource/redis/redis.go:53
+github.com/xbmlz/webber/container.(*Container).init
+	/home/cxc/code/go/src/github.com/xbmlz/webber/container/container.go:33
+github.com/xbmlz/webber/container.New
+	/home/cxc/code/go/src/github.com/xbmlz/webber/container/container.go:24
+github.com/xbmlz/webber.New
+	/home/cxc/code/go/src/github.com/xbmlz/webber/webber.go:32
+main.main
+	/home/cxc/code/go/src/github.com/xbmlz/webber/example/main.go:17
+runtime.main
+	/usr/local/go/src/runtime/proc.go:271
+2024-12-24T16:59:29+08:00	debug	db/db.go:37	initializing database connection
+2024-12-24T16:59:29+08:00	debug	db/db.go:47	connecting to database
+2024-12-24T16:59:29+08:00	debug	db/db.go:80	connected to database
+2024-12-24T16:59:29+08:00	info	webber/http_server.go:53	Starting server on localhost:8080
+2024-12-24T17:00:26+08:00	debug	redis/hook.go:65	ping
+2024-12-24T17:00:26+08:00	error	redis/redis.go:53	failed to connect to redis at localhost:6379: ERR DB index is out of range
+github.com/xbmlz/webber/datasource/redis.New
+	/home/cxc/code/go/src/github.com/xbmlz/webber/datasource/redis/redis.go:53
+github.com/xbmlz/webber/container.(*Container).init
+	/home/cxc/code/go/src/github.com/xbmlz/webber/container/container.go:33
+github.com/xbmlz/webber/container.New
+	/home/cxc/code/go/src/github.com/xbmlz/webber/container/container.go:24
+github.com/xbmlz/webber.New
+	/home/cxc/code/go/src/github.com/xbmlz/webber/webber.go:32
+main.main
+	/home/cxc/code/go/src/github.com/xbmlz/webber/example/main.go:17
+runtime.main
+	/usr/local/go/src/runtime/proc.go:271
+2024-12-24T17:00:26+08:00	debug	db/db.go:37	initializing database connection
+2024-12-24T17:00:26+08:00	debug	db/db.go:47	connecting to database
+2024-12-24T17:00:26+08:00	debug	db/db.go:80	connected to database
+2024-12-24T17:00:26+08:00	info	webber/http_server.go:53	Starting server on localhost:8080
+2024-12-24T17:00:45+08:00	debug	redis/hook.go:65	ping
+2024-12-24T17:00:45+08:00	info	redis/redis.go:51	connected to redis at localhost:6379
+2024-12-24T17:00:45+08:00	debug	db/db.go:37	initializing database connection
+2024-12-24T17:00:45+08:00	debug	db/db.go:47	connecting to database
+2024-12-24T17:00:45+08:00	debug	db/db.go:80	connected to database
+2024-12-24T17:00:45+08:00	info	webber/http_server.go:53	Starting server on localhost:8080
+2024-12-24T17:01:00+08:00	info	example/main.go:30	App env: prod
+2024-12-24T17:01:00+08:00	debug	redis/hook.go:65	get user
+2024-12-24T17:01:00+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.001040556, "time": "2024-12-24 09:01:00"}
+2024-12-24T17:01:06+08:00	info	example/main.go:30	App env: prod
+2024-12-24T17:01:06+08:00	debug	redis/hook.go:65	get user
+2024-12-24T17:01:06+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.00187392, "time": "2024-12-24 09:01:06"}
+2024-12-24T17:01:26+08:00	debug	redis/hook.go:65	ping
+2024-12-24T17:01:26+08:00	info	redis/redis.go:51	connected to redis at localhost:6379
+2024-12-24T17:01:26+08:00	debug	db/db.go:37	initializing database connection
+2024-12-24T17:01:26+08:00	debug	db/db.go:47	connecting to database
+2024-12-24T17:01:26+08:00	debug	db/db.go:80	connected to database
+2024-12-24T17:01:26+08:00	info	webber/http_server.go:53	Starting server on localhost:8080
+2024-12-24T17:01:30+08:00	info	example/main.go:30	App env: prod
+2024-12-24T17:01:30+08:00	debug	redis/hook.go:65	get user
+2024-12-24T17:01:30+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.00063244, "time": "2024-12-24 09:01:30"}
+2024-12-24T17:01:43+08:00	debug	redis/hook.go:65	ping
+2024-12-24T17:01:43+08:00	info	redis/redis.go:51	connected to redis at localhost:6379
+2024-12-24T17:01:43+08:00	debug	db/db.go:37	initializing database connection
+2024-12-24T17:01:43+08:00	debug	db/db.go:47	connecting to database
+2024-12-24T17:01:43+08:00	debug	db/db.go:80	connected to database
+2024-12-24T17:01:43+08:00	info	webber/http_server.go:53	Starting server on localhost:8080
+2024-12-24T17:01:46+08:00	info	example/main.go:30	App env: prod
+2024-12-24T17:01:46+08:00	debug	redis/hook.go:65	get user
+2024-12-24T17:01:46+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.000500135, "time": "2024-12-24 09:01:46"}
+2024-12-24T17:05:05+08:00	debug	redis/hook.go:65	ping
+2024-12-24T17:05:05+08:00	info	redis/redis.go:51	connected to redis at localhost:6379
+2024-12-24T17:05:05+08:00	debug	db/db.go:37	initializing database connection
+2024-12-24T17:05:05+08:00	debug	db/db.go:47	connecting to database
+2024-12-24T17:05:05+08:00	debug	db/db.go:80	connected to database
+2024-12-24T17:05:05+08:00	info	webber/http_server.go:53	Starting server on localhost:8080
+2024-12-24T17:05:09+08:00	info	example/main.go:30	App env: prod
+2024-12-24T17:05:09+08:00	debug	redis/hook.go:65	get user
+2024-12-24T17:05:09+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.001160197, "time": "2024-12-24 09:05:09"}
+2024-12-24T17:05:39+08:00	debug	redis/hook.go:65	ping
+2024-12-24T17:05:39+08:00	info	redis/redis.go:51	connected to redis at localhost:6379
+2024-12-24T17:05:39+08:00	debug	db/db.go:37	initializing database connection
+2024-12-24T17:05:39+08:00	debug	db/db.go:47	connecting to database
+2024-12-24T17:05:39+08:00	debug	db/db.go:80	connected to database
+2024-12-24T17:05:39+08:00	info	webber/http_server.go:53	Starting server on localhost:8080
+2024-12-24T17:05:43+08:00	info	example/main.go:30	App env: prod
+2024-12-24T17:05:43+08:00	debug	redis/hook.go:65	get user
+2024-12-24T17:05:43+08:00	info	example/main.go:43	Got user from redis: 
+2024-12-24T17:05:43+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.000652446, "time": "2024-12-24 09:05:43"}
+2024-12-24T17:07:12+08:00	debug	redis/hook.go:65	ping
+2024-12-24T17:07:12+08:00	info	redis/redis.go:51	connected to redis at localhost:6379
+2024-12-24T17:07:12+08:00	debug	db/db.go:37	initializing database connection
+2024-12-24T17:07:12+08:00	debug	db/db.go:47	connecting to database
+2024-12-24T17:07:12+08:00	debug	db/db.go:80	connected to database
+2024-12-24T17:07:12+08:00	info	webber/http_server.go:53	Starting server on localhost:8080
+2024-12-24T17:07:16+08:00	info	example/main.go:30	App env: prod
+2024-12-24T17:07:16+08:00	debug	redis/hook.go:65	get user
+2024-12-24T17:07:16+08:00	info	example/main.go:43	Got user from redis: 
+2024-12-24T17:07:16+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.00049525, "time": "2024-12-24 09:07:16"}
+2024-12-24T17:07:39+08:00	info	example/main.go:30	App env: prod
+2024-12-24T17:07:39+08:00	debug	redis/hook.go:65	get user
+2024-12-24T17:07:39+08:00	info	example/main.go:43	Got user from redis: 
+2024-12-24T17:07:39+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.000583028, "time": "2024-12-24 09:07:39"}
+2024-12-24T17:08:04+08:00	debug	redis/hook.go:65	ping
+2024-12-24T17:08:04+08:00	info	redis/redis.go:51	connected to redis at localhost:6379
+2024-12-24T17:08:04+08:00	debug	db/db.go:37	initializing database connection
+2024-12-24T17:08:04+08:00	debug	db/db.go:47	connecting to database
+2024-12-24T17:08:04+08:00	debug	db/db.go:80	connected to database
+2024-12-24T17:08:04+08:00	info	webber/http_server.go:53	Starting server on localhost:8080
+2024-12-24T17:08:07+08:00	info	example/main.go:27	App env: prod
+2024-12-24T17:08:07+08:00	debug	redis/hook.go:65	get user
+2024-12-24T17:08:07+08:00	warn	example/main.go:33	Failed to get user from redis: redis: nil
+2024-12-24T17:08:07+08:00	debug	redis/hook.go:65	set user {1 John}
+2024-12-24T17:08:07+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.002700359, "time": "2024-12-24 09:08:07"}
+2024-12-24T17:08:33+08:00	info	example/main.go:27	App env: prod
+2024-12-24T17:08:33+08:00	debug	redis/hook.go:65	get user
+2024-12-24T17:08:33+08:00	warn	example/main.go:33	Failed to get user from redis: redis: nil
+2024-12-24T17:08:33+08:00	debug	redis/hook.go:65	set user {1 John}
+2024-12-24T17:08:33+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.003290197, "time": "2024-12-24 09:08:33"}
+2024-12-24T17:08:34+08:00	info	example/main.go:27	App env: prod
+2024-12-24T17:08:34+08:00	debug	redis/hook.go:65	get user
+2024-12-24T17:08:34+08:00	warn	example/main.go:33	Failed to get user from redis: redis: nil
+2024-12-24T17:08:34+08:00	debug	redis/hook.go:65	set user {1 John}
+2024-12-24T17:08:34+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.001378457, "time": "2024-12-24 09:08:34"}
+2024-12-24T17:09:10+08:00	debug	redis/hook.go:65	ping
+2024-12-24T17:09:10+08:00	info	redis/redis.go:51	connected to redis at localhost:6379
+2024-12-24T17:09:10+08:00	debug	db/db.go:37	initializing database connection
+2024-12-24T17:09:10+08:00	debug	db/db.go:47	connecting to database
+2024-12-24T17:09:10+08:00	debug	db/db.go:80	connected to database
+2024-12-24T17:09:10+08:00	info	webber/http_server.go:53	Starting server on localhost:8080
+2024-12-24T17:09:12+08:00	info	example/main.go:27	App env: prod
+2024-12-24T17:09:12+08:00	debug	redis/hook.go:65	set user 111
+2024-12-24T17:09:12+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.002031896, "time": "2024-12-24 09:09:12"}
+2024-12-24T17:10:31+08:00	debug	redis/hook.go:65	ping
+2024-12-24T17:10:31+08:00	info	redis/redis.go:51	connected to redis at localhost:6379
+2024-12-24T17:10:31+08:00	debug	db/db.go:37	initializing database connection
+2024-12-24T17:10:31+08:00	debug	db/db.go:47	connecting to database
+2024-12-24T17:10:31+08:00	debug	db/db.go:80	connected to database
+2024-12-24T17:10:31+08:00	info	webber/http_server.go:53	Starting server on localhost:8080
+2024-12-24T17:10:38+08:00	info	example/main.go:30	App env: prod
+2024-12-24T17:10:38+08:00	debug	redis/hook.go:65	get user
+2024-12-24T17:10:38+08:00	info	example/main.go:43	Got user from redis: 111
+2024-12-24T17:10:38+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.00180435, "time": "2024-12-24 09:10:38"}
+2024-12-24T17:10:57+08:00	info	example/main.go:30	App env: prod
+2024-12-24T17:10:57+08:00	debug	redis/hook.go:65	get user
+2024-12-24T17:10:57+08:00	info	example/main.go:43	Got user from redis: 
+2024-12-24T17:10:57+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.001021149, "time": "2024-12-24 09:10:57"}
+2024-12-24T17:11:08+08:00	info	example/main.go:30	App env: prod
+2024-12-24T17:11:08+08:00	debug	redis/hook.go:65	get user
+2024-12-24T17:11:08+08:00	info	example/main.go:43	Got user from redis: 
+2024-12-24T17:11:08+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.001145129, "time": "2024-12-24 09:11:08"}
+2024-12-24T17:11:35+08:00	debug	redis/hook.go:65	ping
+2024-12-24T17:11:35+08:00	info	redis/redis.go:51	connected to redis at localhost:6379
+2024-12-24T17:11:35+08:00	debug	db/db.go:37	initializing database connection
+2024-12-24T17:11:35+08:00	debug	db/db.go:47	connecting to database
+2024-12-24T17:11:35+08:00	debug	db/db.go:80	connected to database
+2024-12-24T17:11:35+08:00	info	webber/http_server.go:53	Starting server on localhost:8080
+2024-12-24T17:11:39+08:00	info	example/main.go:30	App env: prod
+2024-12-24T17:11:39+08:00	debug	redis/hook.go:65	get user
+2024-12-24T17:11:39+08:00	info	example/main.go:38	Got user from db: {1 John}
+2024-12-24T17:11:39+08:00	debug	redis/hook.go:65	set user {1 John}
+2024-12-24T17:11:39+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.001035411, "time": "2024-12-24 09:11:39"}
+2024-12-24T17:11:45+08:00	info	example/main.go:30	App env: prod
+2024-12-24T17:11:45+08:00	debug	redis/hook.go:65	get user
+2024-12-24T17:11:45+08:00	info	example/main.go:38	Got user from db: {1 John}
+2024-12-24T17:11:45+08:00	debug	redis/hook.go:65	set user {1 John}
+2024-12-24T17:11:45+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.00287376, "time": "2024-12-24 09:11:45"}
+2024-12-24T17:11:46+08:00	info	example/main.go:30	App env: prod
+2024-12-24T17:11:46+08:00	debug	redis/hook.go:65	get user
+2024-12-24T17:11:46+08:00	info	example/main.go:38	Got user from db: {1 John}
+2024-12-24T17:11:46+08:00	debug	redis/hook.go:65	set user {1 John}
+2024-12-24T17:11:46+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.001674521, "time": "2024-12-24 09:11:46"}
+2024-12-24T17:12:31+08:00	debug	redis/hook.go:65	ping
+2024-12-24T17:12:31+08:00	info	redis/redis.go:51	connected to redis at localhost:6379
+2024-12-24T17:12:31+08:00	debug	db/db.go:37	initializing database connection
+2024-12-24T17:12:31+08:00	debug	db/db.go:47	connecting to database
+2024-12-24T17:12:31+08:00	debug	db/db.go:80	connected to database
+2024-12-24T17:12:31+08:00	info	webber/http_server.go:53	Starting server on localhost:8080
+2024-12-24T17:12:33+08:00	info	example/main.go:30	App env: prod
+2024-12-24T17:12:33+08:00	debug	redis/hook.go:65	get user
+2024-12-24T17:12:33+08:00	info	example/main.go:35	Got error from redis: redis: nil
+2024-12-24T17:12:33+08:00	info	example/main.go:39	Got user from db: {1 John}
+2024-12-24T17:12:33+08:00	debug	redis/hook.go:65	set user {1 John}
+2024-12-24T17:12:33+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.001597091, "time": "2024-12-24 09:12:33"}
+2024-12-24T17:12:57+08:00	debug	redis/hook.go:65	ping
+2024-12-24T17:12:57+08:00	info	redis/redis.go:51	connected to redis at localhost:6379
+2024-12-24T17:12:57+08:00	debug	db/db.go:37	initializing database connection
+2024-12-24T17:12:57+08:00	debug	db/db.go:47	connecting to database
+2024-12-24T17:12:57+08:00	debug	db/db.go:80	connected to database
+2024-12-24T17:12:57+08:00	info	webber/http_server.go:53	Starting server on localhost:8080
+2024-12-24T17:12:59+08:00	info	example/main.go:30	App env: prod
+2024-12-24T17:12:59+08:00	debug	redis/hook.go:65	get user
+2024-12-24T17:12:59+08:00	info	example/main.go:35	Got error from redis: redis: nil
+2024-12-24T17:12:59+08:00	info	example/main.go:39	Got user from db: {1 John}
+2024-12-24T17:12:59+08:00	debug	redis/hook.go:65	set user &{1 John}
+2024-12-24T17:12:59+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.002425143, "time": "2024-12-24 09:12:59"}
+2024-12-24T17:13:00+08:00	info	example/main.go:30	App env: prod
+2024-12-24T17:13:00+08:00	debug	redis/hook.go:65	get user
+2024-12-24T17:13:00+08:00	info	example/main.go:35	Got error from redis: redis: nil
+2024-12-24T17:13:00+08:00	info	example/main.go:39	Got user from db: {1 John}
+2024-12-24T17:13:00+08:00	debug	redis/hook.go:65	set user &{1 John}
+2024-12-24T17:13:00+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.00164592, "time": "2024-12-24 09:13:00"}
+2024-12-24T17:13:01+08:00	info	example/main.go:30	App env: prod
+2024-12-24T17:13:01+08:00	debug	redis/hook.go:65	get user
+2024-12-24T17:13:01+08:00	info	example/main.go:35	Got error from redis: redis: nil
+2024-12-24T17:13:01+08:00	info	example/main.go:39	Got user from db: {1 John}
+2024-12-24T17:13:01+08:00	debug	redis/hook.go:65	set user &{1 John}
+2024-12-24T17:13:01+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.002422727, "time": "2024-12-24 09:13:01"}
+2024-12-24T17:13:01+08:00	info	example/main.go:30	App env: prod
+2024-12-24T17:13:01+08:00	debug	redis/hook.go:65	get user
+2024-12-24T17:13:01+08:00	info	example/main.go:35	Got error from redis: redis: nil
+2024-12-24T17:13:01+08:00	info	example/main.go:39	Got user from db: {1 John}
+2024-12-24T17:13:01+08:00	debug	redis/hook.go:65	set user &{1 John}
+2024-12-24T17:13:01+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.001798473, "time": "2024-12-24 09:13:01"}
+2024-12-24T17:13:01+08:00	info	example/main.go:30	App env: prod
+2024-12-24T17:13:01+08:00	debug	redis/hook.go:65	get user
+2024-12-24T17:13:01+08:00	info	example/main.go:35	Got error from redis: redis: nil
+2024-12-24T17:13:01+08:00	info	example/main.go:39	Got user from db: {1 John}
+2024-12-24T17:13:01+08:00	debug	redis/hook.go:65	set user &{1 John}
+2024-12-24T17:13:01+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.001300613, "time": "2024-12-24 09:13:01"}
+2024-12-24T17:13:02+08:00	info	example/main.go:30	App env: prod
+2024-12-24T17:13:02+08:00	debug	redis/hook.go:65	get user
+2024-12-24T17:13:02+08:00	info	example/main.go:35	Got error from redis: redis: nil
+2024-12-24T17:13:02+08:00	info	example/main.go:39	Got user from db: {1 John}
+2024-12-24T17:13:02+08:00	debug	redis/hook.go:65	set user &{1 John}
+2024-12-24T17:13:02+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.002203759, "time": "2024-12-24 09:13:02"}
+2024-12-24T17:13:02+08:00	info	example/main.go:30	App env: prod
+2024-12-24T17:13:02+08:00	debug	redis/hook.go:65	get user
+2024-12-24T17:13:02+08:00	info	example/main.go:35	Got error from redis: redis: nil
+2024-12-24T17:13:02+08:00	info	example/main.go:39	Got user from db: {1 John}
+2024-12-24T17:13:02+08:00	debug	redis/hook.go:65	set user &{1 John}
+2024-12-24T17:13:02+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.001823939, "time": "2024-12-24 09:13:02"}
+2024-12-24T17:13:02+08:00	info	example/main.go:30	App env: prod
+2024-12-24T17:13:02+08:00	debug	redis/hook.go:65	get user
+2024-12-24T17:13:02+08:00	info	example/main.go:35	Got error from redis: redis: nil
+2024-12-24T17:13:02+08:00	info	example/main.go:39	Got user from db: {1 John}
+2024-12-24T17:13:02+08:00	debug	redis/hook.go:65	set user &{1 John}
+2024-12-24T17:13:02+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.002301688, "time": "2024-12-24 09:13:02"}
+2024-12-24T17:23:46+08:00	debug	redis/hook.go:65	ping
+2024-12-24T17:23:46+08:00	info	redis/redis.go:51	connected to redis at localhost:6379
+2024-12-24T17:23:46+08:00	debug	db/db.go:37	initializing database connection
+2024-12-24T17:23:46+08:00	debug	db/db.go:47	connecting to database
+2024-12-24T17:23:46+08:00	debug	db/db.go:80	connected to database
+2024-12-24T17:23:46+08:00	info	webber/http_server.go:53	Starting server on localhost:8080
+2024-12-24T17:23:49+08:00	info	example/main.go:30	App env: prod
+2024-12-24T17:23:49+08:00	debug	redis/hook.go:65	hgetall user
+2024-12-24T17:23:49+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.00281399, "time": "2024-12-24 09:23:49"}
+2024-12-24T17:23:50+08:00	info	example/main.go:30	App env: prod
+2024-12-24T17:23:50+08:00	debug	redis/hook.go:65	hgetall user
+2024-12-24T17:23:50+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.000630825, "time": "2024-12-24 09:23:50"}
+2024-12-24T17:24:14+08:00	info	example/main.go:30	App env: prod
+2024-12-24T17:24:14+08:00	debug	redis/hook.go:65	hgetall user
+2024-12-24T17:24:14+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.000651959, "time": "2024-12-24 09:24:14"}
+2024-12-24T17:24:17+08:00	debug	redis/hook.go:65	ping
+2024-12-24T17:24:17+08:00	info	redis/redis.go:51	connected to redis at localhost:6379
+2024-12-24T17:24:17+08:00	debug	db/db.go:37	initializing database connection
+2024-12-24T17:24:17+08:00	debug	db/db.go:47	connecting to database
+2024-12-24T17:24:17+08:00	debug	db/db.go:80	connected to database
+2024-12-24T17:24:17+08:00	info	webber/http_server.go:53	Starting server on localhost:8080
+2024-12-24T17:24:19+08:00	info	example/main.go:30	App env: prod
+2024-12-24T17:24:19+08:00	debug	redis/hook.go:65	hgetall user
+2024-12-24T17:24:19+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.001115342, "time": "2024-12-24 09:24:19"}
+2024-12-24T17:24:20+08:00	info	example/main.go:30	App env: prod
+2024-12-24T17:24:20+08:00	debug	redis/hook.go:65	hgetall user
+2024-12-24T17:24:20+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.000534882, "time": "2024-12-24 09:24:20"}
+2024-12-24T17:24:21+08:00	info	example/main.go:30	App env: prod
+2024-12-24T17:24:21+08:00	debug	redis/hook.go:65	hgetall user
+2024-12-24T17:24:21+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.001305456, "time": "2024-12-24 09:24:21"}
+2024-12-24T17:25:15+08:00	debug	redis/hook.go:65	ping
+2024-12-24T17:25:15+08:00	info	redis/redis.go:51	connected to redis at localhost:6379
+2024-12-24T17:25:15+08:00	debug	db/db.go:37	initializing database connection
+2024-12-24T17:25:15+08:00	debug	db/db.go:47	connecting to database
+2024-12-24T17:25:15+08:00	debug	db/db.go:80	connected to database
+2024-12-24T17:25:15+08:00	info	webber/http_server.go:53	Starting server on localhost:8080
+2024-12-24T17:25:19+08:00	info	example/main.go:30	App env: prod
+2024-12-24T17:25:19+08:00	debug	redis/hook.go:65	hgetall user
+2024-12-24T17:25:19+08:00	info	example/main.go:43	Got user from cache: {0 }
+2024-12-24T17:25:19+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.000635425, "time": "2024-12-24 09:25:19"}
+2024-12-24T17:26:13+08:00	debug	redis/hook.go:65	ping
+2024-12-24T17:26:13+08:00	info	redis/redis.go:51	connected to redis at localhost:6379
+2024-12-24T17:26:13+08:00	debug	db/db.go:37	initializing database connection
+2024-12-24T17:26:13+08:00	debug	db/db.go:47	connecting to database
+2024-12-24T17:26:13+08:00	debug	db/db.go:80	connected to database
+2024-12-24T17:26:13+08:00	info	webber/http_server.go:53	Starting server on localhost:8080
+2024-12-24T17:26:22+08:00	info	example/main.go:27	App env: prod
+2024-12-24T17:26:22+08:00	debug	redis/hook.go:65	hgetall user
+2024-12-24T17:26:22+08:00	info	example/main.go:40	Got user from cache: {0 }
+2024-12-24T17:26:22+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.001305526, "time": "2024-12-24 09:26:22"}
+2024-12-24T17:26:57+08:00	debug	redis/hook.go:65	ping
+2024-12-24T17:26:57+08:00	info	redis/redis.go:51	connected to redis at localhost:6379
+2024-12-24T17:26:57+08:00	debug	db/db.go:37	initializing database connection
+2024-12-24T17:26:57+08:00	debug	db/db.go:47	connecting to database
+2024-12-24T17:26:57+08:00	debug	db/db.go:80	connected to database
+2024-12-24T17:26:57+08:00	info	webber/http_server.go:53	Starting server on localhost:8080
+2024-12-24T17:26:59+08:00	info	example/main.go:27	App env: prod
+2024-12-24T17:26:59+08:00	debug	redis/hook.go:65	hgetall user
+2024-12-24T17:26:59+08:00	info	example/main.go:40	Got user from cache: &{0 }
+2024-12-24T17:26:59+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.001145067, "time": "2024-12-24 09:26:59"}
+2024-12-24T17:27:41+08:00	debug	redis/hook.go:65	ping
+2024-12-24T17:27:41+08:00	info	redis/redis.go:51	connected to redis at localhost:6379
+2024-12-24T17:27:41+08:00	debug	db/db.go:37	initializing database connection
+2024-12-24T17:27:41+08:00	debug	db/db.go:47	connecting to database
+2024-12-24T17:27:41+08:00	debug	db/db.go:80	connected to database
+2024-12-24T17:27:41+08:00	info	webber/http_server.go:53	Starting server on localhost:8080
+2024-12-24T17:27:43+08:00	info	example/main.go:27	App env: prod
+2024-12-24T17:27:43+08:00	debug	redis/hook.go:65	hgetall user
+2024-12-24T17:27:43+08:00	info	example/main.go:32	user &{0 }:
+2024-12-24T17:27:43+08:00	info	example/main.go:41	Got user from cache: &{0 }
+2024-12-24T17:27:43+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.00099979, "time": "2024-12-24 09:27:43"}
+2024-12-24T17:32:22+08:00	debug	redis/hook.go:65	ping
+2024-12-24T17:32:22+08:00	info	redis/redis.go:51	connected to redis at localhost:6379
+2024-12-24T17:32:22+08:00	debug	db/db.go:37	initializing database connection
+2024-12-24T17:32:22+08:00	debug	db/db.go:47	connecting to database
+2024-12-24T17:32:22+08:00	debug	db/db.go:80	connected to database
+2024-12-24T17:32:22+08:00	info	webber/http_server.go:53	Starting server on localhost:8080
+2024-12-24T17:32:28+08:00	info	example/main.go:31	App env: prod
+2024-12-24T17:32:28+08:00	debug	redis/hook.go:65	get user
+2024-12-24T17:32:28+08:00	info	example/main.go:39	Got user from db: {1 John}
+2024-12-24T17:32:28+08:00	debug	redis/hook.go:65	set user {"id":1,"name":"John"}
+2024-12-24T17:32:28+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.011149675, "time": "2024-12-24 09:32:28"}
+2024-12-24T17:32:39+08:00	info	example/main.go:31	App env: prod
+2024-12-24T17:32:39+08:00	debug	redis/hook.go:65	get user
+2024-12-24T17:32:39+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.000648978, "time": "2024-12-24 09:32:39"}
+2024-12-24T17:32:40+08:00	info	example/main.go:31	App env: prod
+2024-12-24T17:32:40+08:00	debug	redis/hook.go:65	get user
+2024-12-24T17:32:40+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.001174747, "time": "2024-12-24 09:32:40"}
+2024-12-24T17:33:01+08:00	debug	redis/hook.go:65	ping
+2024-12-24T17:33:01+08:00	info	redis/redis.go:51	connected to redis at localhost:6379
+2024-12-24T17:33:01+08:00	debug	db/db.go:37	initializing database connection
+2024-12-24T17:33:01+08:00	debug	db/db.go:78	connected to database
+2024-12-24T17:33:01+08:00	info	webber/http_server.go:53	Starting server on localhost:8080
+2024-12-24T17:33:26+08:00	debug	redis/hook.go:65	ping
+2024-12-24T17:33:26+08:00	info	redis/redis.go:51	connected to redis at localhost:6379
+2024-12-24T17:33:26+08:00	debug	db/db.go:77	connected to database
+2024-12-24T17:33:26+08:00	info	webber/http_server.go:53	Starting server on localhost:8080

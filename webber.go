@@ -103,3 +103,40 @@ func (a *App) addRoute(method, path string, handler HandlerFunc) {
 func (a *App) Get(path string, handler HandlerFunc) {
 	a.addRoute(http.MethodGet, path, handler)
 }
+
+func (a *App) Post(path string, handler HandlerFunc) {
+	a.addRoute(http.MethodPost, path, handler)
+}
+
+func (a *App) Put(path string, handler HandlerFunc) {
+	a.addRoute(http.MethodPut, path, handler)
+}
+
+func (a *App) Patch(path string, handler HandlerFunc) {
+	a.addRoute(http.MethodPatch, path, handler)
+}
+
+func (a *App) Delete(path string, handler HandlerFunc) {
+	a.addRoute(http.MethodDelete, path, handler)
+}
+
+func (a *App) Logger() log.Logger {
+	return a.container.Logger
+}
+
+func (a *App) Use(middleware ...gin.HandlerFunc) {
+	a.httpServer.router.Use(middleware...)
+}
+
+func (a *App) MigrateDB(values ...interface{}) error {
+	return a.container.DB.AutoMigrate(values...)
+}
+
+func (a *App) SeedDB(values ...interface{}) error {
+	for _, value := range values {
+		if err := a.container.DB.FirstOrCreate(value).Error; err != nil {
+			return err
+		}
+	}
+	return nil
+}
