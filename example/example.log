@@ -103,3 +103,19 @@ github.com/xbmlz/webber.(*App).Run.func2
 2024-12-24T14:36:23+08:00	debug	db/db.go:47	connecting to database
 2024-12-24T14:36:23+08:00	debug	db/db.go:80	connected to database
 2024-12-24T14:36:23+08:00	info	webber/http_server.go:50	Starting server on localhost:9001
+2024-12-24T14:39:36+08:00	debug	db/db.go:37	initializing database connection
+2024-12-24T14:39:36+08:00	debug	db/db.go:47	connecting to database
+2024-12-24T14:39:36+08:00	debug	db/db.go:80	connected to database
+2024-12-24T14:39:36+08:00	info	webber/http_server.go:50	Starting server on localhost:9001
+2024-12-24T14:39:52+08:00	debug	db/db.go:37	initializing database connection
+2024-12-24T14:39:52+08:00	debug	db/db.go:47	connecting to database
+2024-12-24T14:39:52+08:00	debug	db/db.go:80	connected to database
+2024-12-24T14:39:52+08:00	info	webber/http_server.go:50	Starting server on localhost:8080
+2024-12-24T14:39:53+08:00	info	example/main.go:19	App env: prod
+2024-12-24T14:39:53+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.000967685, "time": "2024-12-24 06:39:53"}
+2024-12-24T14:40:43+08:00	debug	db/db.go:37	initializing database connection
+2024-12-24T14:40:43+08:00	debug	db/db.go:47	connecting to database
+2024-12-24T14:40:43+08:00	debug	db/db.go:80	connected to database
+2024-12-24T14:40:43+08:00	info	webber/http_server.go:50	Starting server on localhost:8080
+2024-12-24T14:40:46+08:00	info	example/main.go:19	App env: prod
+2024-12-24T14:40:46+08:00	info	gin@v1.10.0/context.go:185	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0", "latency": 0.022832645, "time": "2024-12-24 06:40:46"}

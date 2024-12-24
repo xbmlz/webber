@@ -1,5 +1,5 @@
 # Webber
-    
+
 Webber is a fast web framework for Golang.
 
 ## Features
@@ -18,6 +18,11 @@ import (
 	"github.com/xbmlz/webber"
 )
 
+type User struct {
+	ID   int    `gorm:"primary_key;AUTO_INCREMENT" json:"id"`
+	Name string `json:"name"`
+}
+
 func main() {
 	app := webber.New()
 
@@ -27,9 +32,19 @@ func main() {
 		// log
 		c.Logger.Infof("App env: %s", env)
 
+		// db
+		// migrate table
+		c.DB.AutoMigrate(&User{})
+		// create user
+		c.DB.Create(&User{Name: "John"})
+		// get user
+		user := User{}
+		c.DB.First(&user, 1)
+
 		// response json
-		c.JSON(200, map[string]string{
+		c.JSON(200, map[string]interface{}{
 			"app_env": env,
+			"user":    user,
 		})
 	})
 
