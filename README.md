@@ -8,6 +8,8 @@ Webber is a fast web framework for Golang.
 - [Gin Web Framework]() - Fast and minimal web framework
 - [GORM ORM]() - The fantastic ORM library for Golang
 - [Redis]() - Redis client for Golang
+- [Cron Job]() - Run cron job in Golang
+- [Zap Logger]() - A high performance logging library for Golang
 
 ## Usage
 
@@ -40,6 +42,7 @@ func main() {
 	// seed data
 	app.SeedDB(&User{ID: 1, Name: "John"})
 
+	// routes
 	app.Get("/ping", func(c *webber.Context) {
 		// log
 		c.Logger.Infof("App env: %s", env)
@@ -71,10 +74,14 @@ func main() {
 		})
 	})
 
+	// cron job
+	app.AddCronJob("@every 1s", func(c *webber.Context) {
+		c.Logger.Info("Cron job running")
+	})
+
 	// run app on port 8080
 	app.Run()
 }
-
 
 ```
 

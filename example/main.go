@@ -26,6 +26,7 @@ func main() {
 	// seed data
 	app.SeedDB(&User{ID: 1, Name: "John"})
 
+	// routes
 	app.Get("/ping", func(c *webber.Context) {
 		// log
 		c.Logger.Infof("App env: %s", env)
@@ -55,6 +56,11 @@ func main() {
 			"user": user,
 			"from": "db",
 		})
+	})
+
+	// cron job
+	app.AddCronJob("@every 1s", func(c *webber.Context) {
+		c.Logger.Info("Cron job running")
 	})
 
 	// run app on port 8080

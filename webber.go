@@ -21,7 +21,11 @@ type App struct {
 	// Config can be used to get configuration values from the environment
 	Config config.Config
 
-	container      *container.Container
+	container *container.Container
+
+	cronRegistered bool
+	cron           *Crontab
+
 	httpServer     *httpServer
 	httpRegistered bool
 }
@@ -76,6 +80,15 @@ func (a *App) Run() {
 			defer wg.Done()
 			s.Run(a.container)
 		}(a.httpServer)
+	}
+
+	if a.cronRegistered {
+		wg.Add(1)
+
+		go func(c *Crontab) {
+			defer wg.Done()
+			c.Start()
+		}(a.cron)
 	}
 
 	wg.Wait()
@@ -139,4 +152,23 @@ func (a *App) SeedDB(values ...interface{}) error {
 		}
 	}
 	return nil
+}
+
+func (a *App) AddCronJob(spec string, jobFunc CronFunc) {
+	if a.cron == nil {
+		a.cron = NewCron(a.container)
+	}
+
+	a.cronRegistered = true
+
+	_, err := a.cron.AddFunc(spec, func() {
+		jobFunc(&Context{
+			Context:   nil,
+			Container: a.container,
+		})
+	})
+
+	if err != nil {
+		a.Logger().Errorf("Failed to add cron job: %s", err.Error())
+	}
 }
