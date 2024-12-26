@@ -13,6 +13,22 @@ Webber is a fast web framework for Golang.
 
 ## Usage
 
+Install Webber:
+
+```bash
+go get -u github.com/xbmlz/webber
+```
+
+Create a new project:
+
+```bash
+mkdir myproject
+cd myproject
+go mod init myproject
+```
+
+Create a new file `main.go` and add the following code:
+
 ```go
 package main
 
