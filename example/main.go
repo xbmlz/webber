@@ -27,6 +27,8 @@ func main() {
 	app.SeedDB(&User{ID: 1, Name: "John"})
 
 	// routes
+	app.AddStaticFiles("/static", "./static")
+
 	app.Get("/ping", func(c *webber.Context) {
 		// log
 		c.Logger.Infof("App env: %s", env)

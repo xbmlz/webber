@@ -6,6 +6,8 @@ import (
 	"net/http"
 	"os"
 	"os/signal"
+	"path/filepath"
+	"strings"
 	"sync"
 	"syscall"
 	"time"
@@ -139,6 +141,33 @@ func (a *App) Logger() log.Logger {
 
 func (a *App) Use(middleware ...gin.HandlerFunc) {
 	a.httpServer.router.Use(middleware...)
+}
+
+func (a *App) Group(prefix string, handlers ...gin.HandlerFunc) *gin.RouterGroup {
+	return a.httpServer.router.Group(prefix, handlers...)
+}
+
+func (a *App) AddStaticFiles(url, root string) {
+	a.httpRegistered = true
+	if !strings.HasPrefix(root, "./") && !filepath.IsAbs(root) {
+		root = "./" + root
+	}
+
+	if strings.HasPrefix(url, "./") {
+		currentWorkingDir, _ := os.Getwd()
+		root = filepath.Join(currentWorkingDir, root)
+	}
+
+	url = "/" + strings.TrimPrefix(url, "/")
+
+	if _, err := os.Stat(root); err != nil {
+		a.Logger().Errorf("Failed to add static files: %s", err.Error())
+		return
+	}
+
+	a.Logger().Infof("Adding static files: %s -> %s", url, root)
+
+	a.httpServer.router.Static(url, root)
 }
 
 func (a *App) MigrateDB(values ...interface{}) error {
