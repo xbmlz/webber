@@ -1,6 +1,6 @@
 module github.com/xbmlz/webber
 
-go 1.22.4
+go 1.22
 
 require (
 	github.com/gin-contrib/pprof v1.5.2
