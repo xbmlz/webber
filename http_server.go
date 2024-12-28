@@ -23,8 +23,9 @@ type httpServer struct {
 	srv    *http.Server
 }
 
-func newHTTPServer(c *container.Container, host string, port int, env string) *httpServer {
-	if env == "prod" {
+func newHTTPServer(c *container.Container, host string, port int, mode string) *httpServer {
+
+	if mode == "release" {
 		gin.SetMode(gin.ReleaseMode)
 	}
 

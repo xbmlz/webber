@@ -26,7 +26,7 @@ type App struct {
 	container *container.Container
 
 	cronRegistered bool
-	cron           *Crontab
+	cron           *crontab
 
 	httpServer     *httpServer
 	httpRegistered bool
@@ -37,11 +37,11 @@ func New() *App {
 	app.loadConfig()
 	app.container = container.New(app.Config)
 
-	env := app.Config.GetString("APP_ENV", "dev")
 	// HTTP Server
 	host := app.Config.GetString("HTTP_HOST", "localhost")
 	port, _ := app.Config.GetInt("HTTP_PORT", 8080)
-	app.httpServer = newHTTPServer(app.container, host, port, env)
+	mode := app.Config.GetString("GIN_MODE", "release")
+	app.httpServer = newHTTPServer(app.container, host, port, mode)
 	app.httpServer.certFile = app.Config.GetString("CERT_FILE", "")
 	app.httpServer.keyFile = app.Config.GetString("KEY_FILE", "")
 
@@ -87,9 +87,11 @@ func (a *App) Run() {
 	if a.cronRegistered {
 		wg.Add(1)
 
-		go func(c *Crontab) {
+		go func(c *crontab) {
 			defer wg.Done()
 			c.Start()
+			<-ctx.Done()
+			c.Stop()
 		}(a.cron)
 	}
 

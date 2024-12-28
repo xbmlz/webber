@@ -5,17 +5,17 @@ import (
 	"github.com/xbmlz/webber/container"
 )
 
-type Crontab struct {
+type crontab struct {
 	*cron.Cron
 	container *container.Container
 }
 
 type CronFunc func(ctx *Context)
 
-func NewCron(c *container.Container) *Crontab {
+func NewCron(c *container.Container) *crontab {
 	cron := cron.New()
 
-	return &Crontab{
+	return &crontab{
 		container: c,
 		Cron:      cron,
 	}

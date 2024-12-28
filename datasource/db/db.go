@@ -11,6 +11,7 @@ import (
 	"gorm.io/driver/mysql"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
+	gormLogger "gorm.io/gorm/logger"
 )
 
 type DB struct {
@@ -29,6 +30,7 @@ type Config struct {
 	Params      string
 	MaxOpenConn int
 	MaxIdleConn int
+	LogLevel    string
 }
 
 var errUnsupportedDialect = fmt.Errorf("unsupported db dialect; supported dialects are - mysql, postgres, sqlite")
@@ -51,7 +53,9 @@ func New(config config.Config, logger datasource.Logger) *DB {
 
 	database := &DB{config: dbConfig, logger: logger}
 
-	database.DB, err = gorm.Open(dialector, &gorm.Config{})
+	database.DB, err = gorm.Open(dialector, &gorm.Config{
+		Logger: gormLogger.Default.LogMode(parseLogLevel(dbConfig.LogLevel)),
+	})
 	if err != nil {
 		logger.Errorf("failed to connect to database: %v", err)
 		return database
@@ -77,6 +81,21 @@ func New(config config.Config, logger datasource.Logger) *DB {
 	logger.Debugf("connected to database")
 
 	return database
+}
+
+func parseLogLevel(level string) gormLogger.LogLevel {
+	switch level {
+	case "silent":
+		return gormLogger.Silent
+	case "error":
+		return gormLogger.Error
+	case "warn":
+		return gormLogger.Warn
+	case "info":
+		return gormLogger.Info
+	default:
+		return gormLogger.Info
+	}
 }
 
 func getDialector(dbConfig *Config) (dialector gorm.Dialector, err error) {
@@ -118,6 +137,7 @@ func getConfig(c config.Config) *Config {
 		Password:    c.GetString("DB_PASSWORD", ""),
 		Database:    c.GetString("DB_NAME", ""),
 		Params:      c.GetString("DB_PARAMS", ""),
+		LogLevel:    c.GetString("DB_LOG_LEVEL", "info"),
 		MaxOpenConn: maxOpenConn,
 		MaxIdleConn: maxIdleConn,
 		Port:        port,
