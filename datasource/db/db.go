@@ -134,6 +134,7 @@ func getConfig(c config.Config) *Config {
 	return &Config{
 		Driver:      c.GetString("DB_DRIVER", ""),
 		Host:        c.GetString("DB_HOST", ""),
+		Username:    c.GetString("DB_USERNAME", ""),
 		Password:    c.GetString("DB_PASSWORD", ""),
 		Database:    c.GetString("DB_NAME", ""),
 		Params:      c.GetString("DB_PARAMS", ""),
