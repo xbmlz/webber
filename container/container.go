@@ -10,6 +10,8 @@ import (
 type Container struct {
 	log.Logger
 
+	Config config.Config
+
 	DB    *db.DB
 	Redis *redis.Redis
 }
@@ -29,6 +31,8 @@ func (c *Container) init(cfg config.Config) {
 	if c.Logger == nil {
 		c.Logger = log.NewWithConfg(cfg)
 	}
+
+	c.Config = cfg
 
 	c.Redis = redis.New(cfg, c.Logger)
 
