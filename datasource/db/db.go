@@ -101,26 +101,18 @@ func parseLogLevel(level string) gormLogger.LogLevel {
 
 func getDialector(dbConfig *Config) (dialector gorm.Dialector, err error) {
 
-	dsn := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?%s",
-		dbConfig.Username, dbConfig.Password, dbConfig.Host, dbConfig.Port, dbConfig.Database, dbConfig.Params)
-
-	if dbConfig.Driver == "sqlite" {
-		// if path is not exist, create it
+	switch dbConfig.Driver {
+	case "sqlite":
 		if _, err := os.Stat(dbConfig.Database); os.IsNotExist(err) {
 			os.MkdirAll(filepath.Dir(dbConfig.Database), os.ModePerm)
 		}
-		dsn = fmt.Sprintf("file:%s", dbConfig.Database)
-	}
-
-	switch dbConfig.Driver {
-	case "sqlite":
-		dialector = sqlite.Open(dsn)
+		dialector = sqlite.Open(fmt.Sprintf("file:%s", dbConfig.Database))
 	case "mysql":
-		dialector = mysql.Open(dsn)
+		dialector = mysql.Open(fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?%s", dbConfig.Username, dbConfig.Password, dbConfig.Host, dbConfig.Port, dbConfig.Database, dbConfig.Params))
 	case "postgres":
-		dialector = postgres.Open(dsn)
+		dialector = postgres.Open(fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s %s", dbConfig.Host, dbConfig.Port, dbConfig.Username, dbConfig.Password, dbConfig.Database, dbConfig.Params))
 	case "sqlserver":
-		dialector = sqlserver.Open(dsn)
+		dialector = sqlserver.Open(fmt.Sprintf("sqlserver://%s:%s@%s:%d?database=%s&%s", dbConfig.Username, dbConfig.Password, dbConfig.Host, dbConfig.Port, dbConfig.Database, dbConfig.Params))
 	default:
 		return nil, errUnsupportedDialect
 	}
