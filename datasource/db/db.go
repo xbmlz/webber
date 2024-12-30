@@ -10,6 +10,7 @@ import (
 	"github.com/xbmlz/webber/datasource"
 	"gorm.io/driver/mysql"
 	"gorm.io/driver/postgres"
+	"gorm.io/driver/sqlserver"
 	"gorm.io/gorm"
 	gormLogger "gorm.io/gorm/logger"
 )
@@ -118,6 +119,8 @@ func getDialector(dbConfig *Config) (dialector gorm.Dialector, err error) {
 		dialector = mysql.Open(dsn)
 	case "postgres":
 		dialector = postgres.Open(dsn)
+	case "sqlserver":
+		dialector = sqlserver.Open(dsn)
 	default:
 		return nil, errUnsupportedDialect
 	}
