@@ -61,7 +61,7 @@ func getConfig(c config.Config) *Config {
 	db, _ := c.GetInt("REDIS_DB", 0)
 
 	return &Config{
-		Host:     c.GetString("REDIS_HOST", "localhost"),
+		Host:     c.GetString("REDIS_HOST", ""),
 		Port:     port,
 		Username: c.GetString("REDIS_USERNAME", ""),
 		Password: c.GetString("REDIS_PASSWORD", ""),
